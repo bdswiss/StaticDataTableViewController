@@ -6,11 +6,12 @@ let package = Package(
     name: "StaticDataTableViewController",
     platforms: [ .iOS(.v8) ],
     products: [
-        .library(name: "StaticDataTableViewController", targets: ["StaticDataTableViewController"]),
+        .library(name: "StaticDataTableViewController", targets: ["StaticDataTableViewControllerFramework"]),
     ],
     dependencies: [],
     targets: [
-        .target(name: "StaticDataTableViewController",
-                path: ".")
+        .target(name: "StaticDataTableViewControllerFramework",
+                path: "StaticDataTableViewControllerFramework",
+                sources: ["StaticDataTableViewController.m"])
     ]
 )
